@@ -1,0 +1,12 @@
+<div class="wrap">
+  <mat-form-field class="box-search">
+    <label>
+      <input #searchBox matInput type="text" placeholder="Поиск по коду и названию">
+    </label>
+  </mat-form-field>
+  <div class="list">
+    <div *ngFor="let currency of currencies | filter:search" class="list__item">
+      <app-currency [currency]="currency"></app-currency>
+    </div>
+  </div>
+</div>

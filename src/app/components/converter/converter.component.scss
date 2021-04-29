@@ -1,0 +1,31 @@
+.card-row {
+  display: flex;
+  max-width: 1000px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px auto;
+}
+
+.card {
+  width: 350px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__nominal {
+    max-width: 100px;
+  }
+
+}
+
+.btn-switch {
+  cursor: pointer;
+  margin: 10px;
+}
+
+@media screen and (max-width: 768px){
+  .card-row {
+    flex-direction: column;
+
+  }
+}

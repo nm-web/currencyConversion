@@ -1,0 +1,21 @@
+.wrap {
+  text-align: center;
+}
+
+.box-search {
+    width: 300px;
+    color:white;
+
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  &__item {
+    max-width: 350px;
+    flex:0 0 300px;
+    margin: 20px 10px;
+  }
+}

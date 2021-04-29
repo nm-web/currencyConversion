@@ -1,0 +1,27 @@
+<mat-card class="card">
+  <p class="card__name">{{currency.Name}}</p>
+  <div class="card__row">
+    <div class="card__value">
+      <span *ngIf="base">{{currency.Nominal}}{{currency.CharCode}}</span>
+      <span *ngIf="!base">{{currency.Nominal}}{{this.valuta}}</span>
+      <span (click)="base=!base" class="btn-switch">
+        <mat-icon>sync_alt</mat-icon>
+      </span>
+      <span *ngIf="base">{{currency.Value}}{{this.valuta}}</span>
+      <span *ngIf="!base">{{currency.Nominal/currency.Value | number:'1.0-4'}}{{currency.CharCode}}</span>
+    </div>
+    <p [ngClass]="{'text--red': (!isIncrease && base) || (isIncrease && !base), 'text--green': (isIncrease && base) || (!isIncrease && !base)}"
+    class="difference">
+      <mat-icon *ngIf="((isIncrease && base) || (!isIncrease && !base)); else decrease">
+        north
+      </mat-icon>
+      <ng-template #decrease>
+        <mat-icon>
+          south
+        </mat-icon>
+      </ng-template>
+      <span>{{difference | number:'1.0-4'}}</span>
+    </p>
+  </div>
+
+</mat-card>

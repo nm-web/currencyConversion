@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/theme";
+:root {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 0;
+  background: var(--primary-color) ;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.select-converter .mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: transparent!important;
+  width: 100px;
+  margin-right: 20px;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-label {
+  color: #acaaaa;
+}
+
+a {
+  text-decoration: none;
+  color:var(--accent-color);
+}

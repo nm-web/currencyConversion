@@ -1,0 +1,23 @@
+<div class="card-row">
+  <mat-card class="card">
+    <div class="select-converter">
+      <app-any-select [items]="currenciesList" (selectedValue)="selectedCurrent($event)"></app-any-select>
+    </div>
+    <mat-form-field class="card__nominal">
+      <label>
+        <input type="number" matInput [(ngModel)]="newValue" (keyup)="onChangeValue()">
+      </label>
+    </mat-form-field>
+  </mat-card>
+  <button class="btn-switch" mat-mini-fab (click)="switchConvertion()">
+    <mat-icon>sync_alt</mat-icon>
+  </button>
+
+
+  <mat-card class="card">
+    <div class="select-converter">
+      <app-any-select [items]="currenciesListCalc" (selectedValue)="selectedCalcCurrent($event)"></app-any-select>
+    </div>
+    <p>{{calculatedValue | number: '1.0-2'}}</p>
+  </mat-card>
+</div>

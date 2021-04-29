@@ -1,0 +1,10 @@
+
+<p>{{selected?.Name}}</p>
+<mat-form-field appearance="fill">
+  <mat-select [(value)]="selected" (valueChange)="selectedValue.emit(selected)" >
+    <mat-option [value]="option" *ngFor="let option of options; index as i">
+      {{ option.CharCode}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
